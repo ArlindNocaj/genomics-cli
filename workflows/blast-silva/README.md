@@ -1,18 +1,16 @@
-# Blast example 
+# Blast example against Silva database for Amazon Genomics CLI
 
-A basic Blast pipeline using Nextflow 
+A basic Blast pipeline using Nextflow and a local *.fa file. 
+It runs also using Amazon Genomics Cli. 
 
-[![Build Status](https://travis-ci.org/nextflow-io/blast-example.svg?branch=master)](https://travis-ci.org/nextflow-io/blast-example)
+## Get started
 
-## Get started 
-
-Install Nextflow 
-
-    curl https://get.nextflow.io | bash 
-
-Run the script 
-
-    nextflow run blast-example -with-docker
+* Follow [Getting Started for Genomics CLI](https://catalog.us-east-1.prod.workshops.aws/v2/workshops/fa1442ae-312d-4d8c-93f9-f925b7385c34/en-US/01-introduction)
+* Upload silva blast db to your s3 bucket
+* Add your s3 bucket to `agc-project.yaml`
+* Modify the s3 urls in `main.nf` to point to your specific bucket with the silva database
+* Deploy agc context: `agc context deploy --context onDemandContext`
+* Run the workflow with genomics cli: `agc workflow run blast-silva --context onDemandContext`
 
 ## Dependencies 
 
