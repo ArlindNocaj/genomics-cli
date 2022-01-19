@@ -26,8 +26,8 @@
  * Defines the pipeline inputs parameters (giving a default value for each for them)
  * Each of the following parameters can be specified as command line options
  */
-// params.query = "$baseDir/data/sample.fa"
-params.query = "$baseDir/data/blast5k_seq.fa"
+params.query = "$baseDir/data/sample.fa"
+//params.query = "$baseDir/data/blast5k_seq.fa"
 params.db = "s3://genomics-data-blast/silva-search/blast_db/SILVA_138.1_SSURef_tax_silva.ncbi.db"
 params.out = "blast.out"
 params.chunkSize = 100
