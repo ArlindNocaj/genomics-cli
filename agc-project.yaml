@@ -1,0 +1,49 @@
+---
+name: NextflowGenomics
+schemaVersion: 1
+workflows:
+  hello:
+    type:
+      language: nextflow
+      version: 1.0
+    sourceURL: workflows/hello
+  rnaseq:
+    type:
+      language: nextflow
+      version: 1.0
+    sourceURL: workflows/rnaseq
+  blast-example:
+    type:
+      language: nextflow
+      version: 1.0
+    sourceURL: workflows/blast-example
+  blast-example-s3:
+    type:
+      language: nextflow
+      version: 1.0
+    sourceURL: workflows/blast-example-s3
+  blast-silva:
+    type:
+      language: nextflow
+      version: 1.0
+    sourceURL: workflows/blast-silva
+data:
+  - location: s3://1000genomes
+    readOnly: true
+  - location: s3://genomics-data-blast
+    readOnly: true
+  - location: s3://blast-project
+
+contexts:
+  onDemandContext:
+    instanceTypes: [ "c5.large", "m5.large", "r5.large","c5.xlarge", "m5.xlarge", "r5.xlarge" ]
+    engines:
+      - type: nextflow
+        engine: nextflow
+
+  spotContext:
+    instanceTypes: [ "c5.large", "m5.large", "r5.large","c5.xlarge", "m5.xlarge", "r5.xlarge" ]
+    requestSpotInstances: true
+    engines:
+      - type: nextflow
+        engine: nextflow
