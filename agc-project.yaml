@@ -36,13 +36,11 @@ data:
 
 contexts:
   onDemandContext:
-    instanceTypes: [ "c5.large", "m5.large", "r5.large","c5.xlarge", "m5.xlarge", "r5.xlarge" ]
     engines:
       - type: nextflow
         engine: nextflow
 
   spotContext:
-    instanceTypes: [ "c5.large", "m5.large", "r5.large","c5.xlarge", "m5.xlarge", "r5.xlarge" ]
     requestSpotInstances: true
     engines:
       - type: nextflow

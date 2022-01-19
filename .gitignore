@@ -2,6 +2,7 @@
 **/work
 **/venv
 **/.venv
+**/blast5k_seq.fa
 .idea
 .nextflow*
 .Rhistory
